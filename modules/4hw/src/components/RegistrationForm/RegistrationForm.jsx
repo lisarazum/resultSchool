@@ -1,5 +1,6 @@
 import styles from './RegistrationForm.module.scss';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+
 export const RegistrationForm = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
@@ -7,6 +8,8 @@ export const RegistrationForm = () => {
 	const [emailError, setEmailError] = useState(true);
 	const [passwordError, setPasswordError] = useState(true);
 	const [passwordCopyError, setPasswordCopyError] = useState(true);
+
+	const buttonRef = useRef(null);
 
 	const onEmailChange = ({ target }) => {
 		setEmail(target.value);
@@ -42,16 +45,19 @@ export const RegistrationForm = () => {
 		if (password !== target.value) {
 			error = 'Пароли не совпадают';
 		}
-		console.log(password);
 
 		setPasswordCopyError(error);
 	};
 
+	useEffect(() => {
+		if (!emailError && !passwordError && !passwordCopyError) {
+			buttonRef.current.focus();
+		}
+	}, [emailError, passwordError, passwordCopyError]);
+
 	const onSubmit = (event) => {
 		event.preventDefault();
-		console.log('email: ', email);
-		console.log('password: ', password);
-		console.log('passwordCopy: ', passwordCopy);
+		console.log({ email: email, password: password });
 	};
 
 	return (
@@ -98,6 +104,7 @@ export const RegistrationForm = () => {
 				<button
 					className={styles['form__btn']}
 					type="submit"
+					ref={buttonRef}
 					disabled={(emailError || passwordError || passwordCopyError) !== null}
 				>
 					Зарегистрироваться
