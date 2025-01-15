@@ -1,0 +1,23 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+	text-align: center;
+}
+
+.section {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.code {
+	position: relative;
+	text-align: center;
+	background: white;
+	color: black;
+	border: 2px solid blue;
+}

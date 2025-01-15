@@ -1,0 +1,24 @@
+{
+  "products": [
+    {
+      "id": "001",
+      "name": "Телевизор",
+      "price": 39900
+    },
+    {
+      "name": "iPhone 8",
+      "price": 5000,
+      "id": "002"
+    },
+    {
+      "id": "003",
+      "name": "Фен",
+      "price": 1749
+    },
+    {
+      "name": "Vacuum",
+      "price": 342345,
+      "id": "f5wtWq6"
+    }
+  ]
+}
