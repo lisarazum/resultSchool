@@ -1,0 +1,22 @@
+.todo {
+	margin: 10vh auto;
+	padding: 20px;
+	width: 500px;
+	background-color: #fff;
+	border-radius: 10px;
+
+	@media (max-width: 568px) {
+		width: 300px;
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+		color: #415167;
+		& img {
+			margin-left: 15px;
+			max-width: 40px;
+		}
+	}
+}

@@ -1,0 +1,49 @@
+.todo {
+	margin: 10vh auto;
+	padding: 20px;
+	width: 100%;
+	max-width: 500px;
+	background-color: #fff;
+	border-radius: 10px;
+
+	&__title {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+		color: #415167;
+		& img {
+			margin-left: 15px;
+			max-width: 40px;
+		}
+	}
+
+	&__row {
+		display: flex;
+		margin-bottom: 20px;
+	}
+
+	&__input {
+		flex: 1;
+		padding: 10px 15px;
+		height: 40px;
+		border: 1px solid grey;
+		border-radius: 10px 0 0 10px;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__add {
+		width: 25%;
+		color: #fff;
+		background-color: #E47F22;
+		border: 1px solid transparent;
+		border-radius: 0 10px 10px 0;
+		transition: all .3s ease;
+
+		&:hover {
+			background-color: rgb(228, 127, 34, .8);
+		}
+	}
+}

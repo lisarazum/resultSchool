@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import './TodoItem.scss';
-export const TodoItem = ({ title, completed }) => {
+export const TodoItem = ({ item }) => {
 	return (
-		<li className={`todo__item ${completed ? 'checked' : ''}`}>
-			{title}
+		<li className={`todo__item ${item.completed ? 'checked' : ''}`}>
+			{item.title}
 			<span className="todo__check"></span>
 			<span className="todo__done"></span>
 		</li>

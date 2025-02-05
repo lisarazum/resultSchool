@@ -4,16 +4,16 @@ import { Loader } from '../Loader/Loader.jsx';
 import { TodoItem } from '../TodoItem/TodoItem.jsx';
 
 export const TodoList = () => {
-	const [todos, setTodos] = useState([]);
-	const [loading, setIsLoading] = useState([]);
+	const [tasks, setTasks] = useState([]);
+	const [isLoading, setIsLoading] = useState(false);
 
 	useEffect(() => {
 		setIsLoading(true);
 
 		fetch('https://jsonplaceholder.typicode.com/todos')
-			.then((rawResponse) => rawResponse.json())
-			.then((response) => setTodos(response))
-			.catch((error) => console.error(`${error} - while getting todos`))
+			.then((response) => response.json())
+			.then((json) => setTasks(json))
+			.catch((error) => console.error(error))
 			.finally(() => setIsLoading(false));
 	}, []);
 
@@ -31,7 +31,7 @@ export const TodoList = () => {
 					{isLoading ? (
 						<Loader />
 					) : (
-						todos.map((todo) => <TodoItem key={todo.id} {...todo} />)
+						tasks.map((task) => <TodoItem key={task['id']} item={task} />)
 					)}
 				</ul>
 			</div>
