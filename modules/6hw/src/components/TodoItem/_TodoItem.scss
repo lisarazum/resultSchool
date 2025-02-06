@@ -1,0 +1,25 @@
+.todo {
+	&__item {
+		display: flex;
+		align-items: center;
+		padding: 10px 20px;
+		cursor: pointer;
+		border: 1px solid rgb(65, 81, 103, .4);
+		border-radius: 5px;
+		transition: .3s ease;
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+
+		&:hover {
+			color: #E47F22;
+		}
+	}
+
+	&__text {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+}
