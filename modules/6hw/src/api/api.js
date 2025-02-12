@@ -37,5 +37,6 @@ export const findTodo = (searchValue) =>
 	fetchServer('GET', { query: `q=${searchValue}` });
 export const sortTodo = (order) =>
 	fetchServer('GET', { query: `_sort=title&_order=${order}` });
-export const updateTodo = (todoData) => fetchServer('PATCH', todoData);
+export const editTodo = (todoId, newTodo) =>
+	fetchServer('PATCH', { id: todoId, ...newTodo });
 export const deleteTodo = (todoId) => fetchServer('DELETE', { id: todoId });

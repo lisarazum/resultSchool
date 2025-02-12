@@ -3,7 +3,7 @@ import './_TodoList.scss';
 import Loader from '../Loader';
 import TodoItem from '../TodoItem';
 
-const TodoList = ({ data, loader = false }) => {
+const TodoList = ({ data = [], loader = false }) => {
 	const renderTodoList = () => {
 		if (loader) {
 			return <Loader />;
@@ -14,11 +14,13 @@ const TodoList = ({ data, loader = false }) => {
 		}
 
 		return (
-			<ul className="list-reset todo__list">
-				{data.map((item) => (
-					<TodoItem key={item.id} title={item.title} />
-				))}
-			</ul>
+			<>
+				<ul className="list-reset todo__list">
+					{data.map((item) => (
+						<TodoItem key={item.id} title={item.title} id={item.id} />
+					))}
+				</ul>
+			</>
 		);
 	};
 

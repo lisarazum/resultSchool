@@ -1,10 +1,12 @@
 import './_TodoItem.scss';
 
-const TodoItem = ({ title }) => {
+import { Link } from 'react-router-dom';
+
+const TodoItem = ({ title, id }) => {
 	return (
-		<li className="todo__item">
+		<Link className="todo__item" to={`/todos/${id}`}>
 			<span className="todo__text">{title}</span>
-		</li>
+		</Link>
 	);
 };
 

@@ -1,0 +1,28 @@
+//todo-app
+.todo {
+	margin: 10vh auto;
+	padding: 20px;
+	width: 100%;
+	max-width: 900px;
+	background-color: #fff;
+	border-radius: 10px;
+
+	&-top {
+		&__title {
+			display: flex;
+			align-items: center;
+			margin-bottom: 20px;
+			color: #415167;
+
+			& img {
+				margin-left: 15px;
+				max-width: 40px;
+			}
+		}
+	}
+
+	&__block {
+		position: relative;
+		min-height: 50px;
+	}
+}

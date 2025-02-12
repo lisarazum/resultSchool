@@ -1,0 +1,58 @@
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	display: flex;
+	width: 50vw;
+	height: 400px;
+	background-color: #ffffff;
+	border-radius: 20px;
+	box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+	transform: translate(-50%, -50%);
+
+	&__close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		background: transparent;
+		border: 0;
+		font-size: 20px;
+		cursor: pointer;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 20px;
+		width: 100%;
+	}
+
+	&__buttons {
+		display: flex;
+		gap: 20px;
+
+		& button {
+			padding: 10px 5px;
+			width: 200px;
+			cursor: pointer;
+			text-transform: uppercase;
+			font-size: 18px;
+			font-weight: 900;
+			border-color: #415167;
+			border-radius: 10px;
+			box-shadow: 0 6px 10px -3px rgba(0, 0, 0, 0.1);
+		}
+	}
+
+	&__confirm {
+		color: #ffffff;
+		background-color: #fd165d;
+	}
+
+	&__cancel {
+		color: #ffffff;
+		background-color: #10ec78;
+	}
+}

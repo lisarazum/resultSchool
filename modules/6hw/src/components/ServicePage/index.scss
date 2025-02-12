@@ -1,0 +1,27 @@
+.service-page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__title {
+		margin: 0;
+		margin-bottom: 4vw;
+		font-size: 16vw;
+		line-height: 1;
+		color: #213547;
+	}
+	&__text {
+		font-size: 4vw;
+	}
+
+	&__link {
+		font-size: 3vw;
+		color: #572a00;
+		text-decoration: none;
+		transition: .3s ease;
+
+		&:hover {
+			color: #E47F22;
+		}
+	}
+}

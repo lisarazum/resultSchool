@@ -1,0 +1,49 @@
+.todo-top {
+	&__go-back {
+		display: flex;
+		align-items: center;
+		padding: 5px 10px;
+		color: #ffffff;
+		background-color: #415167;
+		border-color: #415167;
+		box-shadow: none;
+		cursor: pointer;
+
+		& span {
+			font-size: 1.2rem;
+		}
+
+		& .icon {
+			margin-right: 10px;
+			rotate: 180deg;
+		}
+	}
+}
+
+.todo-actions {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 20px;
+}
+
+.todo-inner {
+	& textarea {
+		display: flex;
+		margin-top: 40px;
+		width: 100%;
+
+		&.title {
+			font-size: 1.5em;
+			font-weight: bold;
+		}
+	}
+
+	&__btns {
+		display: flex;
+		justify-content: flex-end;
+		gap: 20px;
+		width: 100%;
+		margin-top: 20px;
+	}
+}
